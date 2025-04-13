@@ -2,11 +2,13 @@
 body {
   font-family: Arial, sans-serif; /* Sets a clean font */
   display: flex; /* Centers the calculator horizontally */
+  flex-direction: column;
   justify-content: center; /* Centers the calculator horizontally */
   align-items: center; /* Centers the calculator vertically */
-  height: 100vh; /* Makes the body take up full height of the screen */
+  min-height: 100vh; /* Makes the body take up full height of the screen */
   margin: 0; /* Removes default margins */
   background-color: #f4f4f4; /* Light gray background color */
+  padding: 20px;
 }
 
 /* Styling for the calculator container */
@@ -16,6 +18,7 @@ body {
   border-radius: 10px; /* Rounds the corners of the border */
   padding: 20px; /* Adds space inside the container */
   background-color: #fff; /* White background for the calculator */
+  margin-bottom: 20px;
 }
 
 /* Styling for the display area */
@@ -39,7 +42,7 @@ body {
 .number-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 10px;
   flex: 3;
 }
@@ -92,11 +95,52 @@ button:hover {
 }
 
 /* Styling for AC button */
-.number-grid button:last-child {
+.number-grid button:nth-last-child(2) {
   background-color: #ff6b6b;
   color: white;
 }
 
-.number-grid button:last-child:hover {
+.number-grid button:nth-last-child(2):hover {
   background-color: #ff5252;
+}
+
+/* Styling for C button */
+.number-grid button:last-child {
+  background-color: #ffa500;
+  color: white;
+}
+
+.number-grid button:last-child:hover {
+  background-color: #ff8c00;
+}
+
+/* History section styling */
+.history {
+  width: 320px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.history h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+#history-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#history-list div {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #666;
+}
+
+#history-list div:last-child {
+  border-bottom: none;
 }

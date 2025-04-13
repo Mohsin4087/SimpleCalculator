@@ -23,7 +23,8 @@
                 <button onclick="appendNumber('3')">3</button>
                 <button onclick="appendNumber('0')" class="zero-btn">0</button>
                 <button onclick="appendNumber('.')">.</button>
-                <button onclick="clearResult()">AC</button>
+                <button onclick="clearAll()">AC</button>
+                <button onclick="clearCurrent()">C</button>
             </div>
             <!-- Function buttons column -->
             <div class="function-column">
@@ -34,6 +35,11 @@
                 <button onclick="calculateResult()">=</button>
             </div>
         </div>
+    </div>
+    <!-- History section -->
+    <div class="history">
+        <h3>Calculation History</h3>
+        <div id="history-list"></div>
     </div>
     <script src="script.js"></script>
 </body>
