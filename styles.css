@@ -1,0 +1,102 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif; /* Sets a clean font */
+  display: flex; /* Centers the calculator horizontally */
+  justify-content: center; /* Centers the calculator horizontally */
+  align-items: center; /* Centers the calculator vertically */
+  height: 100vh; /* Makes the body take up full height of the screen */
+  margin: 0; /* Removes default margins */
+  background-color: #f4f4f4; /* Light gray background color */
+}
+
+/* Styling for the calculator container */
+.calculator {
+  width: 320px; /* Sets a fixed width for the calculator */
+  border: 2px solid #ccc; /* Adds a border around the calculator */
+  border-radius: 10px; /* Rounds the corners of the border */
+  padding: 20px; /* Adds space inside the container */
+  background-color: #fff; /* White background for the calculator */
+}
+
+/* Styling for the display area */
+#result {
+  width: 100%; /* Makes it take up full width of the container */
+  height: 50px; /* Sets its height */
+  margin-bottom: 10px; /* Adds space below it */
+  font-size: 24px; /* Makes text larger */
+  text-align: right; /* Aligns text to the right (like a real calculator) */
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Styling for buttons container */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Styling for number grid */
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  flex: 3;
+}
+
+/* Styling for function column */
+.function-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+/* Styling for individual buttons */
+button {
+  height: 50px; /* Sets button height */
+  font-size: 18px; /* Makes button text larger */
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Special styling for wide zero button */
+.zero-btn {
+  grid-column: span 2; /* Makes zero button span two columns */
+}
+
+/* Styling for function buttons */
+.function-column button {
+  background-color: #e0e0e0;
+}
+
+.function-column button:hover {
+  background-color: #d0d0d0;
+}
+
+/* Styling for equals button */
+.function-column button:last-child {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.function-column button:last-child:hover {
+  background-color: #45a049;
+}
+
+/* Styling for AC button */
+.number-grid button:last-child {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.number-grid button:last-child:hover {
+  background-color: #ff5252;
+}
